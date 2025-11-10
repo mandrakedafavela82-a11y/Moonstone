@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonstone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="wind-sound" loop>
+    <source src="vento_calmo.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Fundo com lua e estrelas -->
+  <div class="background">
+    <div class="moon"></div>
+    <div class="stars"></div>
+    <div class="clouds"></div>
+  </div>
+
+  <!-- Créditos -->
+  <div class="credits">
+    <div class="credit-text">
+      <p>Desenvolvedores: Ryan, Wesley</p>
+      <p>Design: Emilly, Allana</p>
+      <p>Trilha Sonora: Ryan</p>
+      <p>Produzido por Ryan, Allana, Wesley e Emilly</p>
+      <img src="moonstone_logo.png" alt="Moonstone Logo" class="moonstone-logo">
+    </div>
+  </div>
+
+  <!-- Tela do mapa -->
+  <div id="map-screen">
+    <div class="map-background">
+      <div class="map-stars layer1"></div>
+      <div class="map-stars layer2"></div>
+      <div class="map-stars layer3"></div>
+      <div class="crescent-moon"></div>
+
+      <!-- Partículas flutuantes -->
+      <div id="particles-container"></div>
+    </div>
+
+    <div class="map-container" id="map-container">
+      <img src="mapa_moonstone.jpg" alt="Mapa de Moonstone" class="map-image">
+
+      <!-- Áreas clicáveis com tooltip -->
+      <div class="clickable-area" style="top:420px; left:150px;" data-tooltip="Moonlight"
+           onclick="openPopup('imagens_popup/img_area1.jpg')"></div>
+      <div class="clickable-area" style="top:480px; left:800px;" data-tooltip="Capital"
+           onclick="openPopup('imagens_popup/img_area2.jpg')"></div>
+      <div class="clickable-area" style="top:720px; left:600px;" data-tooltip="3 Beasts"
+           onclick="openPopup('imagens_popup/img_area3.jpg')"></div>
+    </div>
+  </div>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Pop-up -->
+  <div id="popup" class="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="" alt="Imagem do local">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
